@@ -19,22 +19,6 @@ class BlogRollTemplate extends React.Component {
                 }`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
-                        }}
-                      />
-                    </div>
-                  ) : null}
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
@@ -42,14 +26,14 @@ class BlogRollTemplate extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    {/* <span> &bull; </span> */}
+                    {/* <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date}
-                    </span>
+                    </span> */}
                   </p>
                 </header>
                 <p>
-                  {post.excerpt}
+                  {post.frontmatter.description}
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
@@ -94,6 +78,7 @@ export default function BlogRoll() {
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
                   featuredpost
+                  description
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(

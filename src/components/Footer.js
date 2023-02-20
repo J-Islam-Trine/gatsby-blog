@@ -11,17 +11,10 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: "14em", height: "10em" }}
-          />
-        </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: "100vw" }} className="columns">
-              <div className="column is-4">
+              {/* <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
@@ -56,8 +49,8 @@ const Footer = class extends React.Component {
                     </li>
                   </ul>
                 </section>
-              </div>
-              <div className="column is-4">
+              </div> */}
+              {/* <div className="column is-4">
                 <section>
                   <ul className="menu-list">
                     <li>
@@ -72,8 +65,8 @@ const Footer = class extends React.Component {
                     </li>
                   </ul>
                 </section>
-              </div>
-              <div className="column is-4 social">
+              </div> */}
+              <div className="column is-half is-offset-one-quarter social">
                 <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
